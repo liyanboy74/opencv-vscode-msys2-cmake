@@ -1,17 +1,17 @@
 #include <iostream>
-#include "opencv2/opencv.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/imgcodecs.hpp"
+
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/core.hpp>
+
 
 using namespace cv;
 using namespace std;
 
-
-
 int main(int argc, char **argv)
 {
 
-    string location = "c:\\Users\\Asus\\Desktop\\image.jpg" ;
+    string location = "D:\\Pictures\\Bing\\BingWallpaper.jpg" ;
 
     Mat im = imread(location ,1 );
     if (im.empty())
@@ -20,7 +20,10 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    std::cout << im.size;
+    cout << im.size;
+    imshow("img",im);
+
+    waitKey(0);
 
     return 0;
 }
