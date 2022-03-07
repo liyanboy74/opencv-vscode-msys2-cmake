@@ -11,7 +11,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
 
-    string location = "D:\\Pictures\\Bing\\BingWallpaper.jpg" ;
+    string location = "Lenna.png" ;
 
     Mat im = imread(location ,1 );
     if (im.empty())
